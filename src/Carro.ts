@@ -13,7 +13,16 @@ class Carro {
         this.cor = _cor;
     }
 
-    //public ligar(): boolean {}
+    public ligar(): boolean {
+        const numeroAleatorio: number = Math.random();
+        if (numeroAleatorio < 0.5) {
+            console.log(`O carro ${this.modelo} não conseguiu ligar.`);
+            return false;
+        }else{
+        console.log(`O carro ${this.modelo} está ligado.`);
+        return true;
+        }
+    }
 
     public acelerar(velocidade: number): void {
         console.log(`O carro ${this.modelo} está acelerando a ${velocidade}km/h.`);

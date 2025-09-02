@@ -15,7 +15,12 @@ class Livro {
 
     // método
     public ler(): void {
-        console.log(`O livro ${this.titulo} está sendo lido.`);
+        const numeroAleatorio: number = Math.random();
+        if (numeroAleatorio < 0.5) {
+            console.log(`O livro ${this.titulo} não está sendo lido e está livre para leitura.`);
+        } else {
+            console.log(`O livro ${this.titulo} está sendo lido e está indisponivel para leitura no momento.`);
+        }
     }
 
     public exibirDetalhes(): void {
